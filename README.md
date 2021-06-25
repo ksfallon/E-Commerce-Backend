@@ -1,8 +1,10 @@
 <h1 align ="center"> E-Commerce-Backend </h1>
 
-Link to [Heruko page](https://note-taker-app86.herokuapp.com/).
+Link to [VSC Walkthru]().
 <br>
-Link to [Github page](https://github.com/ksfallon/Note-Taker).
+Link to [Insominia Walkthru]().
+<br>
+Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
 ### **TABLE OF CONTENTS:**
 1. [Overview of E-Commerce-Backend](#1-overview-of-e-commerce-backend)
 <!-- 2. [Files & Modules needed to start](#2-files-and-modules-needed-to-start)
