@@ -11,8 +11,10 @@ router.get('/', async (req, res) => {
        // be sure to include its associated Category and Tag data
       include: [{model: Category}, {model: Tag, through: ProductTag}] //should this be tag or product tag?
     });
+    console.log("GETTING ALL PRODUCT DATA", allProductData)
     res.status(200).json(allProductData);
   } catch (err) {
+    console.log("ERROR", err);
     res.status(500).json(err);
   }
 

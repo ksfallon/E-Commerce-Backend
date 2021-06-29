@@ -8,8 +8,9 @@ router.get('/', async (req, res) => {
   try {
     const allTagData = await Tag.findAll({
        // be sure to include its associated Products
-      include: [{model: Product}] //Should it be ProductTag bc thats how tag and product are connected?
+      include: {model: Product} //Should it be ProductTag bc thats how tag and product are connected?
     });
+    console.log("GETTING ALL TAG DATA", allTagData)
     res.status(200).json(allTagData);
   } catch (err) {
     res.status(500).json(err);
@@ -23,7 +24,7 @@ router.get('/:id', async (req, res) => {
   try {
     const tagData = await Tag.findByPk(req.params.id, {
       // be sure to include its associated Products
-      include: [{model: Product}]
+      include: {model: Product}
     });
       if(!tagData) {
       res.status(404).json({ message: 'No tag with this id!' });
