@@ -1,10 +1,8 @@
 <h1 align ="center"> E-Commerce-Backend </h1>
 
-Link to [VSC Walkthru]().
-<br>
 Link to [First Half of VLC and Insominia Walkthru](https://youtu.be/jp6N06c48Mg).
 <br>
-Link to [Second Half of VLC and Insominia Walkthru](https://youtu.be/jp6N06c48Mg).
+Link to [Second Half of VLC and Insominia Walkthru](https://youtu.be/ElbogKglLSE).
 <br>
 Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
 ### **TABLE OF CONTENTS:**
