@@ -24,6 +24,7 @@ router.get('/:id', async (req, res) => {
       // be sure to include its associated Products
       include: [{model: Product}]
     });
+
       if(!categoryData) {
       res.status(404).json({ message: 'No category with this id!' });
       return;
@@ -48,7 +49,8 @@ router.post('/', async (req, res) => {
     category_name: req.body.category_name //tested and this one works
   });
     res.status(200).json(newCategory);
-  } catch(err) {status(400).json(err);
+  } catch(err) {
+    status(400).json(err);
   }
 });
 
