@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     const allTagData = await Tag.findAll({
        // be sure to include its associated Products
-      include: [{model: ProductTag}] //Should it be ProductTag bc thats how tag and product are connected?
+      include: [{model: Product}] //Should it be ProductTag bc thats how tag and product are connected?
     });
     res.status(200).json(allTagData);
   } catch (err) {
@@ -39,7 +39,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   // create a new tag
   try {
-    const newTagData = await Tag.create(req.body);
+    const newTagData = await Tag.create({
+      tag_name: req.body.tag_name
+    });
     res.status(200).json(newTagData);
     //going to try it this way vs the other way that I do in product routes to see if there is a difference.
   } catch (err) {
@@ -68,12 +70,12 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
-    const deleteTagData = await Tag.destroy(req.body, {
+    const deleteTagData = await Tag.destroy({
       where: {
         id: req.params.id
       },
     });
-    if (!deleteTagData[0]) {
+    if (!deleteTagData) {
       res.status(404).json({ message: 'No tag with this id!' });
       return;
     }
