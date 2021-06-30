@@ -12,7 +12,7 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
 
 4. [Creating the *columns* inside **models**](#4-creating-the-columns-inside-models)
 5. [Creating the **api routes**](#5-creating-the-api-routes)
-6. [Screen Shots of App with Inspect/Console](#6-screen-shots-of-app)
+6. [Using MySQL and Insominia ](#6-using-mysql-and-insomnia)
 7. [License for Repository](#7-license)
 
 <br>
@@ -106,7 +106,7 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
     `Tag.belongsToMany(Product, {through: {model: ProductTag, unique: false},})`
         - Products and Tags belong to each other though the *ProductTag* table, which has product_id and tag_id as FK to that connect to Product by product.id and Tag by tag.id
 
-## 4. Creating the **api routes**
+## 5. Creating the **api routes**
 Under the routes folder is the index.js and the api folder. This index.js requires express and api routes and creates that intial route and connection.
 - Within the api folder is another index.js. This one requires express and all the api route files (categoryRoutes, productRoutes and tagRoutes). It creates the routes for each of these files with *router.use* and gives each one its own extension suchs as '/categories'.
 - For each route I needed to create:    
@@ -139,32 +139,37 @@ Under the routes folder is the index.js and the api folder. This index.js requir
     - The new function is "Category.destroy" and it deletes WHERE the req.body.id is. So the the ID that is requested is called and it is then deleted.
     - Do add these new items or categories it can be tested and is done in Insominia.
 6. In Product CREATE and PUT it is slightly more complicated because it is a bulkCreate to update all of the ProductTags And this was provided for us.
-## 5. Using MySQL and Insominia 
+## 6. Using MySQL and Insominia 
 1. Once the connections were made to MySQL, the models and the api routes are done, the database could be dropped there and VSCode and MYSQL can communicate.
-[IMAGE OF MYSQL HERE]
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/MySQL%20database%20drop.png
 
 2. Then I could seed the database with the seed files. This will put data in my categories, porducts, tags and producttags tables.
-[IMAGE OF SEED RUN]
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/npm%20run%20seed.png
 
 3. In Insominia I am able to test all of my CRUD methods:
 **GET all categories**
-[get all image]
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/GET%20ALL%20categories.png
 <br>
 
-**GET single ID**
-[get ID image]
+**GET single Tag ID**
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/GET%20ID%20TAG.png
 <br>
 
 **POST - create new item**
-[POST]
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/CREATE%20new%20Product.png
+<br>
+- That new product on the GET ALL products array
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/Cords%20on%20GET%20ALL%20PRODUCTS.png
 <br>
 
-**PUT - update existing item**
-[PUT]
+**PUT - update existing category item**
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/Music%20to%20Funk.png
 <br>
 
 **DELETE - delete existing item**
-[PUT]
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/DELETE%20TAG.png
+- Then run a GET for that single tag
+https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/show%20tag%20was%20DELETED.png
 <br>
-## 6. License
+## 7. License
 Licensed under the [MIT License](https://choosealicense.com/licenses/mit/#).
