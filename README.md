@@ -145,35 +145,41 @@ Under the routes folder is the index.js and the api folder. This index.js requir
 6. In Product CREATE and PUT it is slightly more complicated because it is a bulkCreate to update all of the ProductTags And this was provided for us.
 ## 6. Using MySQL and Insominia 
 1. Once the connections were made to MySQL, the models and the api routes are done, the database could be dropped there and VSCode and MYSQL can communicate.
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/MySQL%20database%20drop.png
+![MYSQL](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/MySQL%20database%20drop.png)
 
 2. Then I could seed the database with the seed files. This will put data in my categories, porducts, tags and producttags tables.
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/npm%20run%20seed.png
-
+![SEEDS](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/npm%20run%20seed.png
+)
 3. In Insominia I am able to test all of my CRUD methods:
 **GET all categories**
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/GET%20ALL%20categories.png
+
+![GET ALL](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/GET%20ALL%20categories.png)
 <br>
 
 **GET single Tag ID**
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/GET%20ID%20TAG.png
+
+![GET ID](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/GET%20ID%20TAG.png)
 <br>
 
 **POST - create new item**
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/CREATE%20new%20Product.png
+
+![CREATE](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/CREATE%20new%20Product.png)
 <br>
+
 - That new product on the GET ALL products array
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/Cords%20on%20GET%20ALL%20PRODUCTS.png
+![CREATE to show new](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/Cords%20on%20GET%20ALL%20PRODUCTS.png)
 <br>
 
 **PUT - update existing category item**
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/Music%20to%20Funk.png
+![PUT](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/Music%20to%20Funk.png)
 <br>
 
 **DELETE - delete existing item**
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/DELETE%20TAG.png
+![DELETE](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/DELETE%20TAG.png)
+<br>
+
 - Then run a GET for that single tag
-https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/show%20tag%20was%20DELETED.png
+![to show DELETE](https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/show%20tag%20was%20DELETED.png)
 <br>
 
 ## 7. License
