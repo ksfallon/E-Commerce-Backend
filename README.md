@@ -41,7 +41,8 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
  - this is only a portion of the code*
 <br>
 3. Finally in **server.js** you have to import **sequelize** so I required it: 
-`const sequelize = require('./config/connection');`
+`const sequelize = require('./config/connection')`
+<br>
  - This is important not only for the secure connection but is also very important for allowing MySQL to connect to my repository.
 
 
