@@ -140,6 +140,31 @@ Under the routes folder is the index.js and the api folder. This index.js requir
     - Do add these new items or categories it can be tested and is done in Insominia.
 6. In Product CREATE and PUT it is slightly more complicated because it is a bulkCreate to update all of the ProductTags And this was provided for us.
 ## 5. Using MySQL and Insominia 
+1. Once the connections were made to MySQL, the models and the api routes are done, the database could be dropped there and VSCode and MYSQL can communicate.
+[IMAGE OF MYSQL HERE]
 
+2. Then I could seed the database with the seed files. This will put data in my categories, porducts, tags and producttags tables.
+[IMAGE OF SEED RUN]
+
+3. In Insominia I am able to test all of my CRUD methods:
+**GET all categories**
+[get all image]
+<br>
+
+**GET single ID**
+[get ID image]
+<br>
+
+**POST - create new item**
+[POST]
+<br>
+
+**PUT - update existing item**
+[PUT]
+<br>
+
+**DELETE - delete existing item**
+[PUT]
+<br>
 ## 6. License
 Licensed under the [MIT License](https://choosealicense.com/licenses/mit/#).
