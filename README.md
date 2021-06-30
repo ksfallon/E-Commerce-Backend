@@ -40,7 +40,8 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
 `new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW`
  - this is only a portion of the code*
 <br>
-3. Finally in **server.js** you have to import **sequelize** so I required it: `const sequelize = require('./config/connection');`
+3. Finally in **server.js** you have to import **sequelize** so I required it: 
+`const sequelize = require('./config/connection');`
  - This is important not only for the secure connection but is also very important for allowing MySQL to connect to my repository.
 
 
