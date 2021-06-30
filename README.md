@@ -38,13 +38,10 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
  - <br>
 2. Because **dotenv** is already required in my connection.js file and plus *sequelize* the code will provide the second part to our secure connection. The sequelize code provides a place for the dotenv code to be placed.
 `new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW`
- - this is only a portion of the code*
+ - *this is only a portion of the code
 <br>
 3. Finally in **server.js** you have to import **sequelize** so I required it.
-<br> 
-`const sequelize = require('./config/connection')`
-<br>
- - This is important not only for the secure connection but is also very important for allowing MySQL to connect to my repository.
+ - *This is important not only for the secure connection but is also very important for allowing MySQL to connect to my repository.
 
 
 ## 3. 
