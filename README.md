@@ -9,7 +9,6 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
 1. [Overview of E-Commerce-Backend](#1-overview-of-ecommerce-backend)
 2. [Files & Modules needed to start](#2-files-and-modules-needed-to-start)
 3. [Creating a Secure connection with **dotenv** and **sequelize**](#3-creating-a-secure-connection-with-dotenv-and-sequelize)
-
 4. [Creating the *columns* inside **models**](#4-creating-the-columns-inside-models)
 5. [Creating the **api routes**](#5-creating-the-api-routes)
 6. [Using MySQL and Insominia ](#6-using-mysql-and-insomnia)
@@ -171,5 +170,6 @@ https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/DELETE%20TAG.png
 - Then run a GET for that single tag
 https://github.com/ksfallon/E-Commerce-Backend/blob/main/assets/show%20tag%20was%20DELETED.png
 <br>
+
 ## 7. License
 Licensed under the [MIT License](https://choosealicense.com/licenses/mit/#).
