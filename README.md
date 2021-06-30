@@ -18,11 +18,10 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
 <br>
 
 ## 1. Overview of Tasks
-
+- For this project I used [mysql2](https://www.npmjs.com/package/mysql2) and [sequelize](https://www.npmjs.com/package/sequelize) to connect MySQL Database to my VSCode. [dotenv](https://www.npmjs.com/package/dotenv) is used to store sensitive data, such as my MySQL password, username and the name of the database used. In the model's, each table is given a column that contains its keys and in the model/index.js column definitions are used to connect the tables through understood foreign keys.
 <br>
-<br>
 
-## 2. Modules needed to start
+## 2. Files and Modules needed to start
  **Modules used:**
 <br>
  Imported:
