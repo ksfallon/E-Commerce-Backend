@@ -107,10 +107,39 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
         - Products and Tags belong to each other though the *ProductTag* table, which has product_id and tag_id as FK to that connect to Product by product.id and Tag by tag.id
 
 ## 4. Creating the **api routes**
+Under the routes folder is the index.js and the api folder. This index.js requires express and api routes and creates that intial route and connection.
+- Within the api folder is another index.js. This one requires express and all the api route files (categoryRoutes, productRoutes and tagRoutes). It creates the routes for each of these files with *router.use* and gives each one its own extension suchs as '/categories'.
+- For each route I needed to create:    
+    - GET for ALL and for ID
+    - POST to create a new object 
+    - PUT to update an exsisting object
+    - DELETE to delete an exsisting object
+- the GET, POST and PUT and DELETE methods are all basically the same for each route. so I will just explain **category-routes.js**
+1. GET ALL
+    - It is a promise so I include async (right before the req,res) and await right before "Category.findAll". to ensure that data is collected before the status 200 or the status 500 is given.
+    - I'm using try catch as well. The try holds the const categoryData which equals the category.findAll function. 
+        - Within that function I include model product so all products associated with each category is shown with that individual category in the array of all categories.
+    - if the try is successful the result is a status of 200 and the categoryData (the json) is displayed.
+    - If the try isn't successful there is a catch that catches this error, and the status 500 and error is displayed.
+2. GET by ID 
+    - This is the same layout as the GET ALL with a few little tweeks.
+    - the router.get goes to localhost:3001/api/categories/:id, where as in GET ALL the "/:id" is not needed.
+    - our function is "Category.findByPk" so we need to find by a specific primary key and to get that specific we need the req.paramas.id (the id typed into the '/:id' spot).
+    - I still use async and away, try and catch in the same places and I still include model:Product.
+3. POST to CREATE a new category.
+    - Just like GET I'm using async and await in the same places for the promise as well as try and catch so an error will be produced if the newCategory isn't successfully created.
+    - The new function is "Category.create" and it asks to create a newCategory by providing a value to the key *category_name* with the req.body.category_name provided. Do add these new items or categories it can be tested and is done in Insominia.
+4. PUT to UPDATE an exsisting category
+    - Just like GET I'm using async and await in the same places for the promise as well as try and catch so an error will be produced if the newCategory isn't successfully created.
+    - The new function is "Category.update" and it asks to update with the request body (req.body) WHERE the updateCatData current req.body.id is. So the the ID that is requested is called and the information from that id i need to update is updated.
+    - Do add these new items or categories it can be tested and is done in Insominia.
+5. DELETE to DELETE an exsisting category
+    - Just like GET I'm using async and await in the same places for the promise as well as try and catch so an error will be produced if the newCategory isn't successfully created.
+    - Just like GET ID i need to include '/:id'
+    - The new function is "Category.destroy" and it deletes WHERE the req.body.id is. So the the ID that is requested is called and it is then deleted.
+    - Do add these new items or categories it can be tested and is done in Insominia.
+6. In Product CREATE and PUT it is slightly more complicated because it is a bulkCreate to update all of the ProductTags And this was provided for us.
+## 5. Using MySQL and Insominia 
 
-## 5. The api routes js Files
-
-## 6. 
-
-## 7. License
+## 6. License
 Licensed under the [MIT License](https://choosealicense.com/licenses/mit/#).
