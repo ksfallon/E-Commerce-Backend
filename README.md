@@ -54,6 +54,7 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
     - And it sets the "modelname" for each model - 'category', 'tag', 'product' and 'productTag'
 - And finally all of them end with "module.exports" and the class is exported there. Ex: `module.exports = Tag;`
 <br>
+
 2. **Category.js** 
 - *Category* has two keys, an *id* and *category_name*. For *id* there are four requirements - which are the same for all models. 
     `    id: {
@@ -69,11 +70,13 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
     - *The primaryKey is what is used to associate the tables in the index. The primary key of category is used as a foreign key in product as category_id
 - *category_name* only has two requirements - the data type is a string and it cannot be null.
 <br>
+
 3. **Tag.js**
 - it has two keys *id* and *tag_name*.
 - **id** : same requirements as *category.id*
 - - **tag_name** : same requirements as *category.category_name*
 <br>
+
 4. **Product.js**
 - Product has the most keys -5: *id*, *product_name*, *price*, *stock* and *category_id*
 - **id** : same requirements as *category.id*
@@ -84,6 +87,7 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
     - It references the model 'category' on the key 'id'.
     - **Because of this reference we DO NOT have to call a foreign key in the associations made in our *model/index.js* file**.
 <br>
+
 5. **ProductTag.js**
 - *ProductTag* has 3 keys: *id*, *product_id* and *tag_id*.
 - **id** : same requirements as *category.id*
@@ -93,6 +97,7 @@ Link to [Github page](https://github.com/ksfallon/E-Commerce-Backend).
     - It references the model 'product' on the key 'id'.
 - **Because of these references we DO NOT have to call a foreign key in the associations made in our *model/index.js* file**.
 <br>
+
 6. Last I needed to make the associations between the models in the **models/index.js**
 - All of the models are already required as constants at the top of **index.js** page.
 - In each association i have to explain how these tables are connected to one another.
